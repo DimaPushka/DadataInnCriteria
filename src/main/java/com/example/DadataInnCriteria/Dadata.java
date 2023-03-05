@@ -66,8 +66,8 @@ public class Dadata {
         return suggests;
     }
 
-    public void PrintSortedByRegistrationDateAsc(String companyFullOrPartName) {
-        Response suggests = GetResponse(companyFullOrPartName);
+    public void PrintSortedByRegistrationDateAsc(String companyNameInn) {
+        Response suggests = GetResponse(companyNameInn);
         suggests.Criteria.sort(Comparator.naturalOrder());
         suggests.PrintSuggests();
     }
